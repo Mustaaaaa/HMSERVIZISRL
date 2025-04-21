@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'blue-700': '#034792',
+        'slate-100': '#F7F7F7',
       },
     },
   },
