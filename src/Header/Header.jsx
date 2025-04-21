@@ -1,4 +1,5 @@
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
+
 import { useState, useEffect } from 'react';
 import Logo from '/logo-scatola.png'
 const Header = () => {
@@ -30,19 +31,19 @@ const Header = () => {
                 </a>
 
                 <div className='relative flex-row items-center justify-center hidden md:flex text-white'>
-                    <Link to="home" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
+                    <Link to="/" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
                         Home
                     </Link>
-                    <Link to="biography" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center  hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
+                    <Link to="/Servizi" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center  hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
                         Servizi
                     </Link>
-                    <Link to="biography" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center  hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
+                    <Link to="/Luoghi-di-lavoro" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center  hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
                         Luoghi di lavoro
                     </Link>
-                    <Link to="biography" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center  hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
+                    <Link to="/chi-siamo" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center  hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
                         Chi siamo
                     </Link>
-                    <Link to="projects" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center  hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
+                    <Link to="/Contatti" smooth={true} duration={500} className="group h-16 px-10 flex items-center justify-center  hover:text-blue-700 hover:text-xl hover:bg-white transition-all duration-500 hover:cursor-pointer">
                         Contatti
                     </Link>
                 </div>
