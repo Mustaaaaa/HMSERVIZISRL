@@ -245,7 +245,7 @@ const Home = () => {
                 </div>
 
                 {/* Footer */}
-                <div className='px-28'>
+                <div className='px-6'>
                     <hr className="flex mx-auto w-full border-t-1 border-black mt-6" />
                     <Footer />
                 </div>
