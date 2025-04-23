@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <div>
       {/* Contenuto principale del footer */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-10 pt-10">
+      <div className="w-full flex flex-col md:flex-row justify-center items-center gap-10 pt-10">
         {/* Logo */}
-        <div className="w-2/5 lg:w-1/6 flex justify-center">
+        <div className="w-full sm:w-2/5 lg:w-1/6 flex justify-center">
           <img src={Logo} alt="Logo" className="w-52" />
         </div>
 
-        <div className='flex flex-wrap w-2/5 lg:w-4/6 justify-center gap-y-10'>
+        <div className='flex flex-wrap w-full sm:w-2/5 lg:w-4/6 justify-center gap-y-10'>
 
           {/* Sede legale */}
           <div className="w-full lg:w-1/3 flex flex-col gap-6 text-center lg:text-start">
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Informazioni */}
-          <div className="w-full sm:w-full lg:w-1/3 flex flex-col gap-6 text-center lg:text-start">
+          <div className="w-full lg:w-1/3 flex flex-col gap-6 text-center lg:text-start">
             <p className="text-2xl font-semibold">Informazioni</p>
             <p>Per informazioni, domande o riconoscimenti, chiama il numero</p>
           </div>
@@ -43,10 +43,10 @@ const Footer = () => {
 
 
         {/* Bottone Contattaci */}
-        <div className="w-1/5 lg:w-1/6 flex justify-center">
+        <div className="w-full sm:w-1/5 flex justify-center px-4">
           <a
             href="/Contatti"
-            className="w-full md:w-52 h-14 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 border-2 border-blue-700 transition duration-500 active:bg-gray-300 flex justify-center items-center"
+            className="w-full h-14 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 border-2 border-blue-700 transition duration-500 active:bg-gray-300 flex justify-center items-center"
           >
             Contattaci
           </a>
