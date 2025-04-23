@@ -21,213 +21,230 @@ const Home = () => {
 
     return (
         <div className='relative'>
-            <div className="bg-slate-50 h-screen w-full">
+
+            {/** Hero */}
+            <div className="bg-slate-50 h-screen w-full relative overflow-hidden">
+
+                {/** Video */}
                 <video
                     src={Logisticvideo}
                     autoPlay
                     loop
                     muted
-                    className="h-full w-full object-cover fixed">
+                    className="h-full w-full object-cover fixed"
+                >
                 </video>
 
-                <div className=''>
-                    <p className='absolute z-10 top-1/3 left-20 text-9xl text-white drop-shadow-xl font-bold flex flex-col'>
-                        La Tua Logistica, <span>La Nostra Missione</span>
+                {/** Testo e Bottoni */}
+                <div className="relative z-10 flex flex-col items-center sm:items-start justify-center h-full px-6 sm:px-12 md:px-20">
+
+                    {/** Titolo */}
+                    <p className="text-white drop-shadow-xl text-center sm:text-start font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl leading-tight">
+                        La Tua Logistica,
+                        <br />
+                        <span>La Nostra Missione</span>
                     </p>
 
-                    <a
-                        href="/luoghi-di-lavoro"
-                        className="absolute z-10 left-20 bottom-1/3 w-52 h-16 bg-transparent text-white border-2 font-bold rounded-md hover:text-blue-700 hover:bg-white transition duration-500 active:bg-gray-300 flex items-center justify-center"
-                    >
-                        Luoghi di lavoro
-                    </a>
+                    {/** Bottoni Hero */}
+                    <div className="mt-10 flex flex-col sm:flex-row gap-4">
 
+                        <a
+                            href="/luoghi-di-lavoro"
+                            className="w-52 h-14 sm:h-16 bg-transparent text-white border-2 font-bold rounded-md hover:text-blue-700 hover:bg-white transition duration-500 active:bg-gray-300 flex items-center justify-center"
+                        >
+                            Luoghi di lavoro
+                        </a>
 
-                    <a
-                        href="/Contatti"
-                        className='absolute z-10 left-80 bottom-1/3 w-52 h-16 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 onclick:bg-black transition duration-500 active:bg-gray-300 flex items-center justify-center'>
-                        Contattaci
-                    </a>
+                        <a
+                            href="/Contatti"
+                            className="w-52 h-14 sm:h-16 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 active:bg-gray-300 transition duration-500 flex items-center justify-center"
+                        >
+                            Contattaci
+                        </a>
+
+                    </div>
                 </div>
+
             </div>
 
-            <div className='absolute top-0 left-0 mt-[calc(100vh)] w-screen py-12 bg-slate-100 '>
-                <div className='h-screen z-20'>
-                    <div className='px-28'>
-                        <p className='font-semibold text-xl'>Ottimizzare è il nostro mestiere.</p>
-                        <div className='flex mt-4'>
-                            <div className='w-1/2'>
-                                <p className='title-section'>H.M Servizi garantisce soluzioni logistiche di qualità.</p>
-                            </div>
 
+            <div className='absolute top-0 left-0 mt-[calc(100vh)] w-screen pt-20 bg-slate-100'>
+
+                {/** Titolo Sezione */}
+                <div className="px-6 md:px-28">
+                    <p className="font-semibold text-xl text-center md:text-left">Ottimizzare è il nostro mestiere.</p>
+                    <div className="flex flex-col md:flex-row mt-4">
+                        <div className="w-full max-w-[calc(850px)]">
+                            <p className="text-3xl md:text-5xl text-center md:text-start font-semibold pt-5 pb-6 text-blue-700 max-w-[850px]">H.M Servizi garantisce soluzioni logistiche di qualità.</p>
                         </div>
-                    </div>
-
-                    <div className='flex h-3/4 pt-10  px-28'>
-
-                        <div className='w-1/3 flex flex-col justify-center flex-grow'>
-                            <p className='text-xl'>____</p>
-                            <p className='title-paragraph pb-10 pt-5'>Servizi Operativi</p>
-                            <p className='w-2/3'>H.M. Servizi offre una gamma completa di soluzioni operative per magazzini e centri logistici.
-                                Dall’attività di carico e scarico merci alla gestione degli inventari, fino al controllo qualità e allo stoccaggio,
-                                ci impegniamo a garantire un servizio rapido, efficiente e affidabile.
-                                Grazie alla nostra manodopera qualificata e al focus sull’ottimizzazione dei processi,
-                                supportiamo i nostri clienti nel raggiungere i loro obiettivi con precisione e puntualità.</p>
-                        </div>
-
-                        <div className='flex justify-center items-center w-2/3 p-14'>
-                            <img src={Foto1} alt="" className='h-full object-cover' />
-                        </div>
-
                     </div>
                 </div>
 
-                <div className='h-screen section-image-scroll  px-28'>
+                {/** Servizi Operativi */}
+                <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
+                    {/* Testo */}
+                    <div className="w-full md:w-1/2 flex flex-col justify-center order-last md:order-first">
+                        <p className="text-xl text-center md:text-left">____</p>
+                        <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Servizi Operativi</p>
+                        <p className="text-center md:text-left">
+                            H.M. Servizi offre una gamma completa di soluzioni operative per magazzini e centri logistici. Dall’attività di carico e scarico merci alla gestione degli inventari, fino al controllo qualità e allo stoccaggio, ci impegniamo a garantire un servizio rapido, efficiente e affidabile. Grazie alla nostra manodopera qualificata e al focus sull’ottimizzazione dei processi, supportiamo i nostri clienti nel raggiungere i loro obiettivi con precisione e puntualità.
+                        </p>
+                    </div>
 
-                    <div className="relative flex h-screen pt-10">
+                    {/* Immagine */}
+                    <div className="w-full md:w-1/2 flex justify-center items-center order-first md:order-last">
+                        <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
+                    </div>
+                </div>
 
-                        <div className="flex justify-center items-center w-2/3 py-14 pr-24 bg-transparent">
-                            <img src={Foto1} alt="" className="image-scroll h-full object-cover" />
+                {/** Soluzioni su Misura */}
+                <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
+
+                    {/* Immagine */}
+                    <div className="w-full md:w-1/2 flex justify-center items-center order-first">
+                        <img src={Foto1} alt="Soluzioni su Misura" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
+                    </div>
+
+                    {/* Testo */}
+                    <div className="w-full md:w-1/2 flex flex-col justify-center order-last md:order-first">
+                        <p className="text-xl text-center md:text-left">____</p>
+                        <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Soluzioni su Misura</p>
+                        <p className="text-center md:text-left">
+                            Ogni cliente è unico e così anche le sue esigenze logistiche. Per questo motivo, H.M. Servizi sviluppa soluzioni personalizzate progettate per ottimizzare i processi operativi e ridurre i costi. Analizziamo le necessità specifiche di ogni progetto, adattando le nostre competenze per fornire un supporto su misura.
+                        </p>
+                    </div>
+
+                </div>
+
+                {/** Team e Valori */}
+                <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center mb-4">
+
+                    {/* Testo */}
+                    <div className="w-full md:w-1/2 flex flex-col justify-center order-last md:order-first">
+                        <p className="text-xl text-center md:text-left">____</p>
+                        <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Team e Valori</p>
+                        <p className="text-center md:text-left">
+                            Il nostro team rappresenta il cuore pulsante di H.M. Servizi. Professionisti qualificati, esperti nel settore della logistica, lavorano con passione e dedizione per offrire un servizio eccellente. Ci guidano valori come affidabilità, trasparenza e attenzione al cliente, che ci distinguono dai nostri concorrenti.
+                        </p>
+                    </div>
+
+                    {/* Immagine */}
+                    <div className="w-full md:w-1/2 flex justify-center items-center order-first md:order-last">
+                        <img src={Foto1} alt="Team e Valori" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
+                    </div>
+                </div>
+
+
+
+
+                {/* Chi siamo */}
+                <div className="relative w-full">
+
+                    {/* Immagine di sfondo */}
+                    <div className="absolute inset-0 z-0">
+                        <img src={Foto2} alt="Chi siamo" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-black bg-opacity-40" />
+                    </div>
+
+                    {/* Contenuto */}
+                    <div className="relative min-h-[60vh] z-10 flex flex-col justify-between px-6 md:px-28 py-16 h-full">
+                        {/* Testo alto */}
+                        <div>
+                            <p className="text-xl text-white text-center md:text-left">Chi siamo</p>
+                            <p className="text-4xl md:text-5xl font-semibold pt-4 pb-6 text-sky-500 text-center md:text-left">La nostra azienda</p>
+                            <p className="text-lg md:text-xl text-white text-center md:text-left">Descr
+                                dhehizione</p>
                         </div>
 
-                        <div className="w-1/3 flex flex-col justify-center flex-grow">
-                            <p className="text-xl">____</p>
-                            <p className="title-paragraph pb-10 pt-5">Soluzioni su Misura</p>
-                            <p className="w-2/3">
-                                Ogni cliente è unico e così anche le sue esigenze logistiche.
-                                Per questo motivo, H.M. Servizi sviluppa soluzioni personalizzate progettate per ottimizzare i processi operativi e ridurre i costi.
-                                Analizziamo le necessità specifiche di ogni progetto, adattando le nostre competenze per fornire un supporto su misura.
-                                Il nostro approccio flessibile ci consente di affrontare ogni sfida con creatività e professionalità, garantendo sempre i migliori risultati.
+                        {/* Firma in basso */}
+                        <div className="text-center md:text-left mt-10">
+                            <p className="text-lg text-white font-semibold">Hegazy Moustafa</p>
+                            <p className="text-base font-light text-white">CEO, H.M SERVIZI</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                {/* I nostri servizi */}
+                <div className="px-6 md:px-28 my-20">
+
+                    {/* Testo + bottone */}
+                    <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-6 mb-10">
+
+                        <div className="w-full md:w-3/4">
+                            <p className="text-xl font-semibold text-black text-center md:text-start">
+                                I nostri servizi
+                            </p>
+                            <p className="text-3xl md:text-5xl text-center md:text-start font-semibold pt-5 pb-6 text-blue-700 max-w-[850px]">
+                                Lavoriamo per venire incontro a ogni tua esigenza
+                            </p>
+                        </div>
+
+                        <div className="w-full md:w-1/4 flex justify-center">
+                            <a
+                                href="/servizi"
+                                className="w-full md:w-52 h-14 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 border-2 border-blue-700 transition duration-500 active:bg-gray-300 flex justify-center items-center"
+                            >
+                                Leggi altro...
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+                    {/* Sezione Box */}
+                    <div className="flex flex-wrap gap-6 justify-center md:justify-between">
+
+                        {/* Icona e testo della box */}
+                        {[
+                            { icon: faBoxesStacked, label: "Stoccaggio" },
+                            { icon: faUsersGear, label: "Gestione" },
+                            { icon: faArrowsToCircle, label: "Coordinamento" },
+                            { icon: faIndustry, label: "Produzione" },
+                            { icon: faTruckFast, label: "Spedizione" },
+                            { icon: faWarehouse, label: "Inventario" },
+                            { icon: faBoxOpen, label: "Imballaggio" },
+                            {
+                                iconGroup: [faVest, faHelmetSafety],
+                                label: "Sicurezza"
+                            }
+                        ].map((item, idx) => (
+                            <div
+                                key={idx}
+                                className="w-full sm:basis-[47%]  lg:basis-[20%] h-48 flex flex-col justify-center items-center shadow-xl bg-white"
+                            >
+                                {item.icon ? (
+                                    <FontAwesomeIcon icon={item.icon} className="text-blue-700 text-5xl mb-4" />
+                                ) : (
+                                    <div className="flex gap-4">
+                                        {item.iconGroup.map((ic, i) => (
+                                            <FontAwesomeIcon key={i} icon={ic} className="text-blue-700 text-5xl" />
+                                        ))}
+                                    </div>
+                                )}
+                                <p className="font-semibold text-xl text-center">{item.label}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                </div>
+
+                {/* Dove siamo operativi */}
+                <div className=" px-6 md:px-28">
+                    <div className="flex min-h-1/3 w-full">
+                        <div className="flex justify-center w-full">
+                            <p className="text-3xl md:text-5xl font-semibold pb-10 pt-5 text-blue-700 text-center">
+                                Dove siamo operativi?
                             </p>
                         </div>
                     </div>
-
-                </div>
-
-
-
-                <div className='h-[calc(90vh)]  px-28 mb-20'>
-                    <div className='flex h-full pt-10'>
-
-                        <div className='w-1/3 flex flex-col justify-center flex-grow'>
-                            <p className='text-xl'>____</p>
-                            <p className='title-paragraph pb-10 pt-5'>Team e Valori</p>
-                            <p className='w-2/3'>Il nostro team rappresenta il cuore pulsante di H.M. Servizi. Professionisti qualificati, esperti nel settore della logistica,
-                                lavorano con passione e dedizione per offrire un servizio eccellente. Ci guidano valori come affidabilità, trasparenza e attenzione al cliente,
-                                che ci distinguono dai nostri concorrenti.
-                                La nostra missione è creare relazioni di fiducia e durature con i clienti, contribuendo al loro successo attraverso soluzioni innovative e personalizzate.</p>
-                        </div>
-
-                        <div className='flex justify-center items-center w-2/3 p-14'>
-                            <img src={Foto1} alt="" className='h-full object-cover' />
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className='h-[calc(60vh)] mb-40'>
-                    <div className='flex h-full w-full relative'>
-                        <div className='flex justify-center items-center w-screen'>
-                            <img src={Foto2} alt="" className='h-full w-full object-cover' />
-                        </div>
-
-                        <div className='absolute top-0 flex flex-col justify-center px-28 pt-20 flex-grow'>
-                            <p className='text-xl text-white'>Chi siamo</p>
-                            <p className='text-5xl font-semibold pb-10 pt-5 text-sky-500'>La nostra azienda</p>
-                            <p className='text-xl text-white pb-80'>Descrizione</p>
-                            <p className='text-xl text-white pb-2'>Hegazy Moustafa</p>
-                            <p className='text-base font-light text-white'>CEO, H.M SERVIZI</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className='h-[calc(80vh)] px-28'>
-                    <div className='flex h-1/4 w-full'>
-
-                        <div className='flex w-full justify-center'>
-                            <div className='w-3/4'>
-                                <p className='text-xl font-semibold text-black'>I nostri servizi</p>
-                                <p className='text-5xl font-semibold pb-10 pt-5 text-blue-700 w-2/3'>Lavoriamo per venire incontro a ogni tua esigenza</p>
-                                <p className='text-xl text-black'>Descrizione</p>
-                            </div>
-                            <div className='w-1/4 flex justify-end items-center'>
-                                <a
-                                    href='/servizi'
-                                    className='w-52 h-16 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 border-2 border-blue-700 onclick:bg-black transition duration-500 active:bg-gray-300 flex justify-center items-center'>
-                                    Leggi altro...
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className='h-3/4'>
-                        <div className='flex gap-5 justify-end h-2/6 mb-10 '>
-                            <div className='min-w-[calc(20%)] h-full flex flex-col justify-center items-center shadow-xl bg-white'>
-                                <FontAwesomeIcon icon={faBoxesStacked} className='text-blue-700 text-6xl mb-4' />
-                                <p className=' font-semibold text-xl'>Stoccaggio</p>
-                            </div>
-
-                            <div className='min-w-[calc(20%)] h-full flex flex-col justify-center items-center shadow-xl bg-white'>
-                                <FontAwesomeIcon icon={faUsersGear} className='text-blue-700 text-6xl mb-4' />
-                                <p className=' font-semibold text-xl'>Gestione</p>
-                            </div>
-
-                            <div className='min-w-[calc(20%)] h-full flex flex-col justify-center items-center shadow-xl bg-white'>
-                                <FontAwesomeIcon icon={faArrowsToCircle} className='text-blue-700 text-6xl mb-4' />
-                                <p className=' font-semibold text-xl'>Coordinamento</p>
-                            </div>
-
-                            <div className='min-w-[calc(20%)] h-full flex flex-col justify-center items-center shadow-xl bg-white'>
-                                <FontAwesomeIcon icon={faIndustry} className='text-blue-700 text-6xl mb-4' />
-                                <p className=' font-semibold text-xl'>Produzione</p>
-                            </div>
-
-                        </div>
-                        <div className='flex gap-5 h-2/6'>
-                            <div className='min-w-[calc(20%)] h-full flex flex-col justify-center items-center shadow-xl bg-white'>
-                                <FontAwesomeIcon icon={faTruckFast} className='text-blue-700 text-6xl mb-4' />
-                                <p className=' font-semibold text-xl'>Spedizione</p>
-                            </div>
-
-                            <div className='min-w-[calc(20%)] h-full flex flex-col justify-center items-center shadow-xl bg-white'>
-                                <FontAwesomeIcon icon={faWarehouse} className='text-blue-700 text-6xl mb-4' />
-                                <p className=' font-semibold text-xl'>Inventario</p>
-                            </div>
-
-                            <div className='min-w-[calc(20%)] h-full flex flex-col justify-center items-center shadow-xl bg-white'>
-                                <FontAwesomeIcon icon={faBoxOpen} className='text-blue-700 text-6xl mb-4' />
-                                <p className=' font-semibold text-xl'>Imballaggio</p>
-                            </div>
-
-                            <div className='min-w-[calc(20%)] h-full flex flex-col justify-center items-center shadow-xl bg-white'>
-                                <div className='flex gap-5'>
-                                    <FontAwesomeIcon icon={faVest} className='text-blue-700 text-6xl mb-4' />
-                                    <FontAwesomeIcon icon={faHelmetSafety} className='text-blue-700 text-6xl mb-4' />
-                                </div>
-                                <p className=' font-semibold text-xl'>Sicurezza</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className='h-[calc(70)] px-28'>
-                    <div className='flex h-1/4 w-full'>
-
-                        <div className='flex justify-center'>
-                            <div className=''>
-                                <p className='text-5xl font-semibold pb-10 pt-5 text-blue-700'>Dove siamo operativi?</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className='h-3/4 w-full'>
+                    <div className="aspect-[1.5] ">
                         <Slider />
                     </div>
                 </div>
 
+                {/* Footer */}
                 <div className='px-28'>
                     <hr className="flex mx-auto w-full border-t-1 border-black mt-6" />
                     <Footer />
