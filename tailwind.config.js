@@ -10,6 +10,9 @@ export default {
         'blue-700': '#034792',
         'slate-100': '#F7F7F7',
       },
+      screens: {
+        'lgcustom': '1111px',
+      },
     },
   },
   plugins: [],
