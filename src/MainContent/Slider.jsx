@@ -6,8 +6,8 @@ import "swiper/css/pagination";
 
 const Slider = () => {
   const images = [
-    "/public/foto1.webp",
-    "/public/screenshot.png",
+    "/foto1.webp",
+    "/screenshot.png",
   ];
 
   return (
