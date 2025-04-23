@@ -11,10 +11,10 @@ const Header = () => {
         e.stopPropagation();
     };
     useEffect(() => {
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 0) {
 
             const handleScroll = () => {
-                setIsScrolled(window.scrollY > 10);
+                setIsScrolled(window.scrollY > 0);
             };
 
             window.addEventListener('scroll', handleScroll);
