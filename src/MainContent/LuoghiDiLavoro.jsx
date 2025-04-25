@@ -36,16 +36,18 @@ const LuoghiDiLavoro = () => {
   };
   return (
     <div>
-      <div className="pt-52 px-28">
-        <p className='font-semibold text-xl'>Luoghi di lavoro</p>
-        <div className='flex mt-4'>
-          <div className='w-1/2'>
-            <p className='title-section'>Efficienza e longevità per i tuoi ambienti di lavoro</p>
+      <div className="px-6 md:px-28 pt-32">
+        <p className="font-semibold text-xl text-center md:text-left">Luoghi di lavoro</p>
+        <div className="flex flex-col md:flex-row mt-4">
+          <div className="w-full max-w-[calc(850px)]">
+            <p className="text-3xl md:text-5xl text-center md:text-start font-semibold pt-5 pb-6 text-blue-700 max-w-[850px]">
+              Efficienza e longevità per i tuoi ambienti di lavoro
+            </p>
           </div>
         </div>
       </div>
 
-      <div className='pt-10 px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6'>
+      <div className='pt-10 px-6 md:px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6'>
         {locations.map((location, index) => (
           <div key={index}>
             <div
@@ -55,7 +57,7 @@ const LuoghiDiLavoro = () => {
               <img
                 src={location.images[0]}
                 alt={location.nome}
-                className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110"
+                className="object-cover h-full w-full rounded-2xl transform transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
             </div>
