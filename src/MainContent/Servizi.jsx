@@ -2,8 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 import { faUsersGear } from '@fortawesome/free-solid-svg-icons';
 import { faArrowsToCircle } from '@fortawesome/free-solid-svg-icons';
-import { faHelmetSafety } from '@fortawesome/free-solid-svg-icons';
-import { faVest } from '@fortawesome/free-solid-svg-icons';
 import { faWarehouse } from '@fortawesome/free-solid-svg-icons';
 import { faIndustry } from '@fortawesome/free-solid-svg-icons';
 import { faTruckFast } from '@fortawesome/free-solid-svg-icons';
@@ -17,162 +15,171 @@ import Footer from "../Footer/Footer"
 const Servizi = () => {
     return (
         <div>
-            <div className="pt-52">
-                <div className='px-28'>
-                    <p className='font-semibold text-xl'>I nostri servizi</p>
-                    <div className='flex mt-4'>
-                        <div className='w-1/2'>
-                            <p className='title-section'>Lavoriamo per venire incontro a ogni tua esigenza</p>
-                        </div>
+            {/** Titolo Sezione */}
+            <div className="px-6 md:px-28 pt-32">
+                <p className="font-semibold text-xl text-center md:text-left">I nostri servizi</p>
+                <div className="flex flex-col md:flex-row mt-4">
+                    <div className="w-full max-w-[calc(850px)]">
+                        <p className="text-3xl md:text-5xl text-center md:text-start font-semibold pt-5 pb-6 text-blue-700 max-w-[850px]">
+                            Lavoriamo per venire incontro a ogni tua esigenza
+                        </p>
                     </div>
-                    <p className='w-2/3 pt-5'> Descrizione da fare</p>
                 </div>
             </div>
 
-            <div>{/* Stoccaggio */}
-                <div className='flex pt-10 px-28'>
 
-                    <div className='flex items-center w-1/3 '>
-                        <div>
-                            <FontAwesomeIcon icon={faBoxesStacked} className='text-blue-700 text-6xl ' />
-                            <p className='title-paragraph pb-10 pt-5'>Stoccaggio</p>
-                            <p className='w-2/3'> Descrizione da fare...</p>
-                        </div>
-                    </div>
+            {/* Stoccaggio */}
+            <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
 
-                    <div className='flex justify-center items-center w-2/3 '>
-                        <img src={Foto1} alt="" className='aspect-[calc(1.5*3)/3] object-cover' />
-                    </div>
-
+                {/* Testo */}
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:items-start order-last md:order-first text-center">
+                    <FontAwesomeIcon icon={faBoxesStacked} className='text-blue-700 text-6xl' />
+                    <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Stoccaggio</p>
+                    <p className="text-center md:text-left">
+                        Descrizione da fare...
+                    </p>
                 </div>
+
+                {/* Immagine */}
+                <div className="w-full md:w-2/3 flex justify-center items-center order-last md:order-last">
+                    <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
+                </div>
+
             </div>
 
-            <div>{/* Gestione */}
-                <div className='flex px-28'>
+            {/* Gestione */}
+            <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
 
-                    <div className='flex justify-center items-center w-2/3'>
-                        <img src={Foto1} alt="" className='aspect-[calc(1.5*3)/3] object-cover' />
-                    </div>
-
-                    <div className='flex items-center w-1/3 pl-14 '>
-                        <div>
-                            <FontAwesomeIcon icon={faUsersGear} className='text-blue-700 text-6xl ' />
-                            <p className='title-paragraph pb-10 pt-5'>Gestione</p>
-                            <p className='w-2/3'> Descrizione da fare...</p>
-                        </div>
-                    </div>
-
+                {/* Immagine */}
+                <div className="w-full md:w-2/3 flex justify-center items-center order-last md:order-first">
+                    <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
                 </div>
+
+                {/* Testo */}
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:items-start md:order-last">
+                    <FontAwesomeIcon icon={faUsersGear} className='text-blue-700 text-6xl ' />
+                    <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Gestione</p>
+                    <p className="text-center md:text-left">
+                        Descrizione da fare...
+                    </p>
+                </div>
+
             </div>
 
-            <div>{/* Coordinamento */}
-                <div className='flex px-28'>
+            {/* Coordinamento */}
+            <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
 
-                    <div className='flex items-center w-1/3 '>
-                        <div>
-                            <FontAwesomeIcon icon={faArrowsToCircle} className='text-blue-700 text-6xl ' />
-                            <p className='title-paragraph pb-10 pt-5'>Coordinamento</p>
-                            <p className='w-2/3'> Descrizione da fare...</p>
-                        </div>
-                    </div>
-
-                    <div className='flex justify-center items-center w-2/3'>
-                        <img src={Foto1} alt="" className='aspect-[calc(1.5*3)/3] object-cover' />
-                    </div>
-
+                {/* Testo */}
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:items-start order-first">
+                    <FontAwesomeIcon icon={faArrowsToCircle} className='text-blue-700 text-6xl ' />
+                    <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Coordinamento</p>
+                    <p className="text-center md:text-left">
+                        Descrizione da fare...
+                    </p>
                 </div>
+
+                {/* Immagine */}
+                <div className="w-full md:w-2/3 flex justify-center items-center order-first md:order-last">
+                    <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
+                </div>
+
             </div>
 
-            <div>{/* Produzione */}
-                <div className='flex px-28'>
+            {/* Produzione */}
+            <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
 
-                    <div className='flex justify-center items-center w-2/3'>
-                        <img src={Foto1} alt="" className='aspect-[calc(1.5*3)/3] object-cover' />
-                    </div>
-
-                    <div className='flex items-center w-1/3 pl-14'>
-                        <div>
-                            <FontAwesomeIcon icon={faIndustry} className='text-blue-700 text-6xl ' />
-                            <p className='title-paragraph pb-10 pt-5'>Produzione</p>
-                            <p className='w-2/3'> Descrizione da fare...</p>
-                        </div>
-                    </div>
-
+                {/* Immagine */}
+                <div className="w-full md:w-2/3 flex justify-center items-center order-last md:order-first">
+                    <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
                 </div>
+
+                {/* Testo */}
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:items-start md:order-last">
+                    <FontAwesomeIcon icon={faIndustry} className='text-blue-700 text-6xl ' />
+                    <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Stoccaggio</p>
+                    <p className="text-center md:text-left">
+                        Descrizione da fare...
+                    </p>
+                </div>
+
             </div>
 
-            <div>{/* Spedizione */}
-                <div className='flex px-28'>
+            {/* Spedizione */}
+            <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
 
-                    <div className='flex items-center w-1/3 '>
-                        <div>
-                            <FontAwesomeIcon icon={faTruckFast} className='text-blue-700 text-6xl ' />
-                            <p className='title-paragraph pb-10 pt-5'>Spedizione</p>
-                            <p className='w-2/3'> Descrizione da fare...</p>
-                        </div>
-                    </div>
-
-                    <div className='flex justify-center items-center w-2/3'>
-                        <img src={Foto1} alt="" className='aspect-[calc(1.5*3)/3] object-cover' />
-                    </div>
-
+                {/* Testo */}
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:items-start order-first">
+                    <FontAwesomeIcon icon={faTruckFast} className='text-blue-700 text-6xl ' />
+                    <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Spedizione</p>
+                    <p className="text-center md:text-left">
+                        Descrizione da fare...
+                    </p>
                 </div>
+
+                {/* Immagine */}
+                <div className="w-full md:w-2/3 flex justify-center items-center order-first md:order-last">
+                    <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
+                </div>
+
             </div>
 
-            <div>{/* Inventario */}
-                <div className='flex px-28'>
+            {/* Inventario */}
+            <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
 
-                    <div className='flex justify-center items-center w-2/3'>
-                        <img src={Foto1} alt="" className='aspect-[calc(1.5*3)/3] object-cover' />
-                    </div>
-
-                    <div className='flex items-center w-1/3 pl-14'>
-                        <div>
-                            <FontAwesomeIcon icon={faWarehouse} className='text-blue-700 text-6xl ' />
-                            <p className='title-paragraph pb-10 pt-5'>Inventario</p>
-                            <p className='w-2/3'> Descrizione da fare...</p>
-                        </div>
-                    </div>
-
+                {/* Immagine */}
+                <div className="w-full md:w-2/3 flex justify-center items-center order-last md:order-first">
+                    <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
                 </div>
+
+                {/* Testo */}
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:items-start md:order-last">
+                    <FontAwesomeIcon icon={faWarehouse} className='text-blue-700 text-6xl ' />
+                    <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Inventario</p>
+                    <p className="text-center md:text-left">
+                        Descrizione da fare...
+                    </p>
+                </div>
+
             </div>
 
-            <div>{/* Imballaggio */}
-                <div className='flex px-28'>
+            {/* Imballaggio */}
+            <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
 
-                    <div className='flex items-center w-1/3 '>
-                        <div>
-                            <FontAwesomeIcon icon={faBoxOpen} className='text-blue-700 text-6xl ' />
-                            <p className='title-paragraph pb-10 pt-5'>Imballaggio</p>
-                            <p className='w-2/3'> Descrizione da fare...</p>
-                        </div>
-                    </div>
-
-                    <div className='flex justify-center items-center w-2/3'>
-                        <img src={Foto1} alt="" className='aspect-[calc(1.5*3)/3] object-cover' />
-                    </div>
-
+                {/* Testo */}
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:items-start order-first">
+                    <FontAwesomeIcon icon={faBoxOpen} className='text-blue-700 text-6xl ' />
+                    <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Imballaggio</p>
+                    <p className="text-center md:text-left">
+                        Descrizione da fare...
+                    </p>
                 </div>
+
+                {/* Immagine */}
+                <div className="w-full md:w-2/3 flex justify-center items-center order-first md:order-last">
+                    <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
+                </div>
+
             </div>
 
-            <div>{/* Sicurezza */}
-                <div className='flex px-28'>
+            {/* Sicurezza */}
+            <div className="px-6 md:px-28 py-16 flex flex-col md:flex-row gap-10 items-center">
 
-                    <div className='flex justify-center items-center w-2/3'>
-                        <img src={Foto1} alt="" className='aspect-[calc(1.5*3)/3] object-cover' />
-                    </div>
-
-                    <div className='flex items-center w-1/3 pl-14'>
-                        <div>
-                            <FontAwesomeIcon icon={faVest} className='text-blue-700 text-6xl pr-4' />
-                            <FontAwesomeIcon icon={faHelmetSafety} className='text-blue-700 text-6xl ' />
-                            <p className='title-paragraph pb-10 pt-5'>Sicurezza</p>
-                            <p className='w-2/3'> Descrizione da fare...</p>
-                        </div>
-                    </div>
-
+                {/* Immagine */}
+                <div className="w-full md:w-2/3 flex justify-center items-center order-last md:order-first">
+                    <img src={Foto1} alt="Servizi operativi" className="aspect-[1.5] object-cover rounded-2xl shadow-md w-full max-w-[600px] md:max-w-none" />
                 </div>
+
+                {/* Testo */}
+                <div className="w-full md:w-1/3 flex flex-col justify-center md:items-start md:order-last">
+                    <FontAwesomeIcon icon={faIndustry} className='text-blue-700 text-6xl ' />
+                    <p className="title-paragraph pb-6 pt-5 text-center md:text-left">Sicurezza</p>
+                    <p className="text-center md:text-left">
+                        Descrizione da fare...
+                    </p>
+                </div>
+
             </div>
+
 
             <div className='px-28'>
                 <hr className="flex mx-auto w-full border-t-1 border-black mt-6" />
