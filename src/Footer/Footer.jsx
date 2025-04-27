@@ -1,5 +1,7 @@
 import Logo from '/logotras.png'
 
+import { Link } from 'react-router-dom';  
+
 
 
 const Footer = () => {
@@ -44,12 +46,12 @@ const Footer = () => {
 
         {/* Bottone Contattaci */}
         <div className="w-full sm:w-1/5 flex justify-center px-4">
-          <a
-            href="/Contatti"
+          <Link
+            to="/Contatti"
             className="w-full h-14 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 border-2 border-blue-700 transition duration-500 active:bg-gray-300 flex justify-center items-center"
           >
             Contattaci
-          </a>
+          </Link>
         </div>
       </div>
 

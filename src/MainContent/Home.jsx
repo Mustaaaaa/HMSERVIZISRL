@@ -2,6 +2,8 @@ import Logisticvideo from '/logistica.mp4'
 import Foto1 from '/foto1.webp'
 import Foto2 from '/screenshot.png'
 
+import { Link } from 'react-router-dom';  
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUsersGear } from '@fortawesome/free-solid-svg-icons';
 import { faBusinessTime } from '@fortawesome/free-solid-svg-icons';
@@ -55,19 +57,19 @@ const Home = () => {
                     {/** Bottoni Hero */}
                     <div className="mt-10 flex flex-col sm:flex-row gap-4">
 
-                        <a
-                            href="/luoghi-di-lavoro"
+                        <Link
+                            to="/luoghi-di-lavoro"
                             className="w-52 h-14 sm:h-16 bg-transparent text-white border-2 font-bold rounded-md hover:text-blue-700 hover:bg-white transition duration-500 active:bg-gray-300 flex items-center justify-center"
                         >
                             Luoghi di lavoro
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/Contatti"
+                        <Link
+                            to="/Contatti"
                             className="w-52 h-14 sm:h-16 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 active:bg-gray-300 transition duration-500 flex items-center justify-center"
                         >
                             Contattaci
-                        </a>
+                        </Link>
 
                     </div>
                 </div>
@@ -192,12 +194,12 @@ const Home = () => {
                         </div>
 
                         <div className="w-full md:w-1/4 flex justify-center">
-                            <a
-                                href="/servizi"
+                            <Link
+                                to="/servizi"
                                 className="w-full md:w-52 h-14 bg-blue-700 text-white font-bold rounded-md hover:bg-white hover:text-blue-700 border-2 border-blue-700 transition duration-500 active:bg-gray-300 flex justify-center items-center"
                             >
                                 Leggi altro...
-                            </a>
+                            </Link>
                         </div>
 
                     </div>
