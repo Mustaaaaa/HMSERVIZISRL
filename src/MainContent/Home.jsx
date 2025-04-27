@@ -3,19 +3,26 @@ import Foto1 from '/foto1.webp'
 import Foto2 from '/screenshot.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 import { faUsersGear } from '@fortawesome/free-solid-svg-icons';
-import { faArrowsToCircle } from '@fortawesome/free-solid-svg-icons';
-import { faHelmetSafety } from '@fortawesome/free-solid-svg-icons';
-import { faVest } from '@fortawesome/free-solid-svg-icons';
-import { faWarehouse } from '@fortawesome/free-solid-svg-icons';
-import { faIndustry } from '@fortawesome/free-solid-svg-icons';
-import { faTruckFast } from '@fortawesome/free-solid-svg-icons';
-import { faBoxOpen } from '@fortawesome/free-solid-svg-icons';
+import { faBusinessTime } from '@fortawesome/free-solid-svg-icons';
+import InnovationIcon from '/innovation.png'
+import PerformanceIcon from '/performance.png'
+import FlexibilityIcon from '/flexibility.png'
+import CustomerserviceIcon from '/customer-service.png'
+import SupportIcon from '/support.png'
 import Slider from "./Slider"
 
 import Footer from "../Footer/Footer"
 
+const items = [
+    { icon: faUsersGear, label: "Gestione" },
+    { icon: faBusinessTime, label: "Pianificazione" },
+    { icon: InnovationIcon, label: "Innovazione" },
+    { icon: PerformanceIcon, label: "Performance" },
+    { icon: FlexibilityIcon, label: "Flessibilità" },
+    { icon: SupportIcon, label: "Supporto" },
+    { icon: CustomerserviceIcon, label: "Servizi su richiesta" },
+];
 const Home = () => {
 
 
@@ -74,8 +81,8 @@ const Home = () => {
                 <div className="px-6 md:px-28">
                     <p className="font-semibold text-xl text-center md:text-left">Ottimizzare è il nostro mestiere.</p>
                     <div className="flex flex-col md:flex-row mt-4">
-                        <div className="w-full max-w-[calc(850px)]">
-                            <p className="text-3xl md:text-5xl text-center md:text-start font-semibold pt-5 pb-6 text-blue-700 max-w-[850px]">H.M Servizi garantisce soluzioni logistiche di qualità.</p>
+                        <div className="w-full">
+                            <p className="text-3xl md:text-5xl text-center md:text-start font-semibold pt-5 pb-6 text-blue-700">H.M Servizi garantisce soluzioni logistiche di qualità.</p>
                         </div>
                     </div>
                 </div>
@@ -152,12 +159,16 @@ const Home = () => {
                         <div>
                             <p className="text-xl text-white text-center md:text-left">Chi siamo</p>
                             <p className="text-4xl md:text-5xl font-semibold pt-4 pb-6 text-sky-500 text-center md:text-left">La nostra azienda</p>
-                            <p className="text-lg md:text-xl text-white text-center md:text-left">Descr
-                                dhehizione</p>
+                            <p className="md:text-xl text-white text-center md:text-left w-full md:w-1/4">
+                                Nata da un consorzio con una storia di quasi 40 anni, HM Servizi è un'azienda logistica presente attualmente in quattro siti.
+                                La nostra missione è fornire soluzioni logistiche innovative e su misura per ogni cliente, garantendo massima efficienza operativa,
+                                flessibilità e affidabilità. Fondata con l'obiettivo di rivoluzionare la gestione della logistica in outsourcing,
+                                HM Servizi si distingue per la sua capacità di analizzare continuamente i processi, migliorare le performance e valorizzare le persone.
+                            </p>
                         </div>
 
                         {/* Firma in basso */}
-                        <div className="text-center md:text-left mt-10">
+                        <div className="text-center md:text-left mt-10 hidden">
                             <p className="text-lg text-white font-semibold">Hegazy Moustafa</p>
                             <p className="text-base font-light text-white">CEO, H.M SERVIZI</p>
                         </div>
@@ -195,33 +206,20 @@ const Home = () => {
 
                     {/* Sezione Box */}
                     <div className="flex flex-wrap gap-6 justify-center md:justify-between">
-
                         {/* Icona e testo della box */}
-                        {[
-                            { icon: faBoxesStacked, label: "Stoccaggio" },
-                            { icon: faUsersGear, label: "Gestione" },
-                            { icon: faArrowsToCircle, label: "Coordinamento" },
-                            { icon: faIndustry, label: "Produzione" },
-                            { icon: faTruckFast, label: "Spedizione" },
-                            { icon: faWarehouse, label: "Inventario" },
-                            { icon: faBoxOpen, label: "Imballaggio" },
-                            {
-                                iconGroup: [faVest, faHelmetSafety],
-                                label: "Sicurezza"
-                            }
-                        ].map((item, idx) => (
+                        {items.map((item, idx) => (
                             <div
                                 key={idx}
-                                className="w-full sm:basis-[47%]  lg:basis-[20%] h-48 flex flex-col justify-center items-center shadow-xl bg-white"
+                                className="w-full sm:basis-[47%] lg:basis-[20%] h-48 flex flex-col justify-center items-center shadow-xl bg-white"
                             >
-                                {item.icon ? (
+                                {typeof item.icon === 'object' ? ( // Controlla se è un'icona FontAwesome  
                                     <FontAwesomeIcon icon={item.icon} className="text-blue-700 text-5xl mb-4" />
                                 ) : (
-                                    <div className="flex gap-4">
-                                        {item.iconGroup.map((ic, i) => (
-                                            <FontAwesomeIcon key={i} icon={ic} className="text-blue-700 text-5xl" />
-                                        ))}
-                                    </div>
+                                    <img
+                                        src={item.icon} // Assicurati che l'icona sia un percorso di immagine  
+                                        alt={item.label}
+                                        className="h-12 w-12 mb-4" // Puoi regolare le dimensioni come preferisci  
+                                    />
                                 )}
                                 <p className="font-semibold text-xl text-center">{item.label}</p>
                             </div>
